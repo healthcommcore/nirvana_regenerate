@@ -250,11 +250,11 @@ a:active, a:focus {
   padding: 17px 0;
 }
 
-.covid-btn,
-.covid-btn:active,
-.covid-btn:visited {
+.generate-btn.covid-btn,
+.generate-btn.covid-btn:active,
+.generate-btn.covid-btn:visited {
   background: #bf3f3f !important;
-  color: #fff;
+  color: #fff !important;
 }
 
 body {
