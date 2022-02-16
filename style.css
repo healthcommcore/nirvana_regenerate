@@ -227,6 +227,36 @@ a:active, a:focus {
   padding: 13px 18px;
 }
 
+.recruitment-message {
+  border-bottom: #4a79a1 1px solid;
+  font-size: 2.65em;
+  color: #4a79a1;
+  padding-top: 30px;
+  padding-bottom: 10px;
+	text-align: center;
+}
+
+.covid-container {
+  background: #ead1d1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+	text-align: center;
+}
+
+.covid-container .generate-btn {
+	display: inline-block;
+  margin: 0 15px;
+  font-size: 2.3em;
+  padding: 17px 0;
+}
+
+.covid-btn,
+.covid-btn:active,
+.covid-btn:visited {
+  background: #bf3f3f !important;
+  color: #fff;
+}
+
 body {
   counter-reset: timeline-steps;
 }
