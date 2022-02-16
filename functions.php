@@ -1,22 +1,22 @@
 <?php
-function nirvana_child_enqueue_styles() {
+function nirvana_regenerate_enqueue_styles() {
 
   $parent_style = 'nirvanas';
   wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
   wp_enqueue_style('nirvana_regenerate',
-    get_stylesheet_directory_uri() . '/css/style.css',
+    get_stylesheet_directory_uri() . '/style.css',
     array($parent_style), 
     wp_get_theme()->get('Version')
   );
 }
 
-add_action('wp_enqueue_scripts', 'nirvana_child_enqueue_styles');
+add_action('wp_enqueue_scripts', 'nirvana_regenerate_enqueue_styles');
 
 function hero_widgets_init() {
   register_sidebar( array(
     'name' => 'Hero area',
     'id' => 'hero-image-widget',
-    'before_widget' => '<div id="%1$s" class="hero-iamge">',
+    'before_widget' => '<div id="%1$s" class="hero-image">',
     'after_widget' => '</div>',
     'before_title' => '<h2>',
     'after_title' => '</h2>',

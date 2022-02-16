@@ -1,8 +1,8 @@
 'use strict';
 
 const dir = {
-  src : 'sass/style.scss',
-  build: 'css/'
+  src : 'sass/*.scss',
+  build: './'
 };
 
 const 
@@ -23,7 +23,7 @@ const clean = () => {
   .pipe(sourcemaps.init())
   .pipe(sass()).on('error', sass.logError)
   .pipe(postcss([autoprefixer()]))
-  .pipe(sourcemaps.write('./'))
+  .pipe(sourcemaps.write('./maps'))
   .pipe(gulp.dest(dir.build))
   .pipe(browsersync.stream());
 };
