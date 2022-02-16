@@ -1,3 +1,16 @@
+/*
+Theme Name: Nirvana reGENERATE child
+Theme URI: http://www.healthcommcore.org
+Description: A child theme of Nirvana tailored to HCC lab websites
+Author: Health Communication Core
+Author URI: http://www.healthcommcore.org
+Template: nirvana
+Version: 1.0.0
+License: GNU Neneral Public License
+License URI:
+Tags:
+Text Domain: nirvana_regenerate
+*/
 /** Variables **/
 /** Fonts **/
 /* Nirvana Custom CSS */
@@ -437,4 +450,185 @@ p + ul {
 .footer-bottom-container li:first-child {
   border: none;
 }
-/*# sourceMappingURL=main.css.map */
+
+@media (max-width: 1280px) {
+  #forbottom {
+    min-height: 50px !important;
+    padding-top: 50px !important;
+  }
+}
+@media (max-width: 1199px) {
+  #pp-afterslider .home-padding {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1059px) and (min-width: 641px) {
+  #footer .second-row .column {
+    width: 33%;
+  }
+  #footer .second-row .column:nth-child(4),
+#footer .second-row .column:nth-child(5) {
+    width: 50%;
+  }
+  #footer .second-row .column:nth-child(4) a,
+#footer .second-row .column:nth-child(5) a {
+    margin-top: 30px;
+  }
+  #footer .second-row .ucsd {
+    float: none;
+  }
+}
+@media (max-width: 899px) {
+  #header-container > div {
+    margin-top: 15px !important;
+  }
+
+  #branding {
+    height: 170px !important;
+  }
+  #branding a#logo img {
+    width: 230px;
+  }
+
+  #header-widget-area a img {
+    width: 90px;
+    height: auto;
+  }
+
+  #access ul li a {
+    font-size: 18px !important;
+  }
+  #access a > span {
+    padding: 11px 16px;
+  }
+
+  #pp-afterslider .ppbox {
+    font-size: 2.45em;
+  }
+  #pp-afterslider .ppbox h2 {
+    font-size: 56px !important;
+  }
+
+  #content h1.entry-title {
+    font-size: 2.6em !important;
+  }
+}
+@media (max-width: 800px) {
+  #header-container,
+#header-widget-area {
+    width: 50% !important;
+    margin: 0;
+  }
+
+  #header-container {
+    float: left;
+  }
+
+  #header-widget-area,
+#header-widget-area ul {
+    float: right;
+  }
+
+  #access ul li a {
+    font-size: 16px !important;
+  }
+  #access a > span {
+    padding: 10px 13px;
+  }
+}
+@media (max-width: 640px) {
+  #access .menu ul li.menu-main-search {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+  #access .menu ul li.menu-main-search .searchform {
+    position: relative;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .nivo-caption {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  #pp-afterslider .home-padding {
+    padding: 0 40px;
+  }
+  #pp-afterslider .ppbox {
+    font-size: 2em;
+    line-height: 1.33em;
+  }
+  #pp-afterslider .ppbox h2 {
+    font-size: 48px !important;
+  }
+  #pp-afterslider .ppbox .generate-btn {
+    margin-top: 30px;
+    padding: 13px 0;
+    width: 100%;
+  }
+  #pp-afterslider .homepage-bottom-widget {
+    padding: 50px 0;
+  }
+  #pp-afterslider .homepage-bottom-widget .together {
+    font-size: 2.3em;
+  }
+
+  #front-columns h2 {
+    margin-bottom: 30px;
+  }
+
+  #content p,
+#content ol,
+#content ul {
+    font-size: 19px !important;
+  }
+
+  #footer .column.first-row {
+    width: 100%;
+  }
+  #footer .first-row {
+    text-align: center;
+  }
+  #footer .first-row a {
+    display: inline-block;
+  }
+  #footer .first-row-left a,
+#footer .first-row-right a {
+    float: none;
+  }
+  #footer .second-row .column {
+    width: 100%;
+  }
+  #footer .second-row .ucsd, #footer .second-row .dfci {
+    float: none;
+  }
+}
+@media (max-width: 480px) {
+  #pp-afterslider .home-padding {
+    padding: 0 20px;
+  }
+  #pp-afterslider .ppbox {
+    font-size: 1.8em;
+    line-height: 1.33em;
+  }
+  #pp-afterslider .ppbox h2 {
+    font-size: 40px !important;
+  }
+  #pp-afterslider .homepage-bottom-widget {
+    padding: 30px 0;
+  }
+  #pp-afterslider .homepage-bottom-widget .together {
+    font-size: 1.9em;
+  }
+
+  #forbottom {
+    padding-top: 20px !important;
+    min-height: 20px !important;
+  }
+  #forbottom section .page {
+    padding-left: 10px;
+  }
+}
