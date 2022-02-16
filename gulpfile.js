@@ -1,44 +1,50 @@
 'use strict';
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var importer = require('node-sass-globbing');
-var plumber = require('gulp-plumber');
-var browserSync = require('browser-sync').create();
-//var cssmin = require('gulp-cssmin');
-var cleanCSS = require('gulp-clean-css');
-var uncss = require('gulp-uncss');
-var stripCssComments = require('gulp-strip-css-comments');
-var uglify = require('gulp-uglify');
-var livereload = require('gulp-livereload')
-var sass_config = {
-  importer: importer,
-  includePaths: [
-    'node_modules/compass-mixins/lib/'
-  ]
-};
-//
-//Compiles sass
-gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass(sass_config).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 version']
-    }))
-    .pipe(stripCssComments())
-    .pipe(cleanCSS())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./css'));
-});
 
-//Type "gulp" on the command line to watch file changes
-gulp.task('default', function(){
-  livereload.listen();
-    gulp.watch('./sass/*.scss', ['sass']);
-    gulp.watch(['./css/style.css'], function (files){
-      livereload.changed(files)
-    });
-});
+const dir = {
+  src : 'sass/style.scss',
+  build: 'css/'
+};
+
+const 
+  gulp = require('gulp'),
+  sass = require('gulp-sass')(require('sass')),
+  //sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  postcss = require('gulp-postcss'),
+  cssnano = require('cssnano'),
+  autoprefixer = require('autoprefixer'),
+  browsersync = require('browser-sync').create()
+;
+
+const clean = () => {
+  console.log(dir.src);
+  return gulp
+  .src(dir.src)
+  .pipe(sourcemaps.init())
+  .pipe(sass()).on('error', sass.logError)
+  .pipe(postcss([autoprefixer()]))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest(dir.build))
+  .pipe(browsersync.stream());
+};
+
+const reload = () => {
+  browsersync.reload();
+}
+
+const watch = () => {
+  browsersync.init({
+    proxy: "regenerate.dr809.test",
+    browser: "firefox"
+  });
+  gulp.watch(dir.src, clean).on('change', browsersync.reload);
+  /*
+  gulp.watch(dir.src, clean);
+  */
+}
+
+const build = gulp.parallel(clean, watch);
+
+exports.clean = clean;
+exports.watch = watch;
+exports.default = build;
