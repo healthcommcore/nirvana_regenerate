@@ -1,0 +1,482 @@
+/*
+Theme Name: Nirvana child
+Theme URI: http://www.healthcommcore.org
+Description: A child theme of Nirvana tailored to HCC lab websites
+Author: Health Communication Core
+Author URI: http://www.healthcommcore.org
+Template: nirvana
+Version: 1.0.0
+License: GNU Neneral Public License
+License URI:
+Tags:
+Text Domain: nirvana_child
+*/
+
+
+/** Variables **/
+$blue: #4A79A1;
+$dk-green: #54783B;
+$green: #829C6F;
+$yellow: #F1D682;
+$lt-yellow: #F4E1A3;
+
+/** Fonts **/
+$ibm: 'IBM Plex Sans';
+$ibm-cond: 'IBM Plex Sans Condensed';
+
+/* Nirvana Custom CSS */ 
+#branding {
+    border-bottom: #A11A24 1px solid;
+}
+.header-logo {
+  float: left;
+  margin-right: 50px;
+}
+
+.widget_search {
+  margin-top: 20px;
+}
+
+#forbottom {
+  min-height: 100px;
+  padding-top: 100px;
+  section .page {
+    padding-left: 40px;
+  }
+}
+
+a:active, a:focus {
+  background: none !important;
+}
+
+/** Side menu **/
+#primary {
+  margin-top: 40px;
+}
+.sidey {
+  border-bottom: $yellow 7px solid;
+}
+.sidey .widget-title span {
+  display: none;
+}
+.widget-area {
+  .side-menu {
+    a {
+      color: #000;
+      text-transform: uppercase;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      position: relative;
+    }
+    li.current_page_item a {
+      font-weight: 700;
+    }
+    ul { 
+      margin-top: 30px;
+      li {
+        margin-bottom: 1.0em;
+      }
+    }
+    ul.children {
+      margin-left: 30px;
+      margin-top: 0;
+      a {
+        text-transform: none;
+        font-size: 0.93em;
+      }
+    }
+  }
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+}
+
+/** Homepage **/
+
+.slider-text-separator {
+  display: none;
+}
+
+#frontpage {
+  .nivo-caption {
+    width: 90%;
+    right: 5%;
+    top: 27%;
+    h2 {
+      letter-spacing: -0.01em;
+      font-weight: 600;
+    }
+  }
+}
+
+#pp-texttop, 
+#pp-textmiddle, 
+#pp-textbottom, 
+#front-columns-box {
+  padding: 90px 0;
+}
+
+#pp-afterslider {
+  font-family: $ibm;
+  .home-padding {
+    padding: 0 200px;
+  }
+  #pp-texttop, 
+  #pp-textmiddle { 
+    background: #fff;
+  }
+  #pp-textmiddle {
+    text-align: center;
+  }
+  #pp-textbottom { 
+    background: $lt-yellow;
+    text-align: center;
+    .smaller {
+      font-size: 0.7em;
+    }
+    a {
+      color: $dk-green;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    a.generate-btn.green {
+      margin-top: 70px;
+      text-decoration: none;
+      background: $green;
+      color: #fff;
+    }
+    a.generate-btn.green:focus,
+    a.generate-btn.green:visited,
+    a.generate-btn.green:hover,
+    a.generate-btn.green:active {
+      background: $green !important;
+    }
+  }
+  .ppbox {
+    margin: 0 auto;
+    color: $blue;
+    font-size: 2.65em;
+    line-height: 1.5em;
+    max-width: 100%;
+    h2 {
+      font-size: 66px !important;
+      font-weight: 600 !important;
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+  #front-text1 h2,
+  #front-text2 h2,
+  #front-text3 h2,
+  #front-text4 h2,
+  #front-text5 h2 {
+    color: $blue;
+  }
+  #front-columns-box {
+    background: $green;
+    #front-columns {
+      li, li a {
+        font-size: 1.0em;
+        line-height: 1.4em;
+      }
+      li {
+        color: #fff;
+      }
+      li a {
+        color: $yellow;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+      li a.generate-btn {
+        color: $blue;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      h2 {
+        color: #fff;
+      }
+    }
+  }
+  .homepage-bottom-widget {
+    padding: 80px 0;
+    color: $blue;
+    .together {
+      text-align: center;
+      font-size: 3.0em;
+      line-height: 1.4em;
+    }
+    
+  }
+  .wp-video {
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+.ppcolumn {
+  .column-image {
+    text-align: center;
+  }
+  .clickable-column {
+    display: inline-block;
+    border: #000 2px solid;
+  }
+  img {
+    width: 370px;
+    margin: 0 auto;
+    display: block;
+  }
+  .column-image-inside-centered {
+    a {
+      display: inline-block;
+    }
+    h3 {
+      font-weight: 700;
+      margin-top: 15px;
+      font-size: 1.3em !important;
+    }
+  }
+}
+
+// MAIN NAV
+#access {
+  .menu > ul {
+    margin-left: 0;
+  }
+  a > span {
+    padding: 13px 18px;
+  }
+}
+
+
+// CONTENT
+
+body {
+  counter-reset: timeline-steps;
+}
+p {
+  margin-bottom: 20px;
+}
+.container {
+  max-width: 1370px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#header-widget-area {
+  right: -10%;
+}
+.widget-title span {
+  border: none;
+  color: $dk-green;
+  font-size: 0.9em;
+}
+#content { 
+  h1.entry-title {
+    margin-bottom: 14px;
+    font-size: 3.2em !important;
+    font-weight: 500;
+    font-family: $ibm !important;
+    letter-spacing: -0.01em;
+    line-height: 1.2em;
+  }
+  .entry-title, h2,
+  .entry-content h3 {
+    font-weight: 700;
+  }
+  .entry-content h3 {
+  }
+  a, a:link, a:visited {
+    text-decoration: underline;
+  }
+  .side-menu a {
+    text-decoration: none;
+  }
+  ul, ol {
+    margin-left: 2.5em;
+  }
+  .blog-date {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  img.alignright {
+    margin-right: 20px;
+  }
+  a.generate-btn {
+    text-decoration: none;
+    margin-bottom: 50px;
+    font-size: 1.6em;
+  }
+  .disclaimer {
+    font-size: 0.8em;
+  }
+// TIMELINE
+  ol.timeline {
+    h3 {
+      font-family: $ibm-cond;
+      color: $blue;
+      font-weight: 500;
+      margin-top: 0;
+    }
+    li p, li ul li, li h3 {
+      line-height: 1.4em;
+    }
+    > li {
+      list-style: none;
+      border-left: $dk-green 10px solid;
+      padding-bottom: 40px;
+    }
+    > li h3, > li p {
+      padding-left: 53px;
+    }
+    > li ul {
+      padding-left: 24px;
+    }
+    li:last-child {
+      border-color: #fff;
+    }
+  }
+  ol.timeline > li:before {
+    counter-increment: timeline-steps;
+    content: counter(timeline-steps);
+    position: absolute;
+    margin-top: -2px;
+    margin-left: -41px;
+    font-family: $ibm;
+    font-weight: 700;
+    font-size: 2.0em;
+    background: #fff;
+    color: $blue;
+    border: $dk-green 6px solid;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 1.4em;
+  }
+}
+
+.generate-btn {
+  text-align: center;
+  display: block;
+  margin: 50px auto 0;
+  color: $blue;
+  padding: 20px 0;
+  width: 450px;
+  font-weight: 500;
+  font-family: $ibm;
+  font-weight: 700;
+  background: $yellow;
+}
+
+.generate-btn:visited,
+.generate-btn:active {
+  background: $yellow !important;
+}
+
+p + ul {
+  margin-top: -18px;
+}
+
+#footer {
+  .row {
+    clear: both;
+  }
+  .column {
+    float: left;
+  }
+  .column.first-row {
+    width: 50%;
+    margin: 20px 0;
+  }
+  .first-row a {
+    padding: 0 50px;
+  }
+  .first-row-left a {
+    float: right;
+  }
+  .first-row-right a {
+    float: left;
+  }
+  .second-row {
+    text-align: center;
+    height: auto;
+    padding: 30px 0;
+    .column {
+      width: 20%;
+    }
+    a {
+      padding: 0 10%;
+      margin: 0 auto;
+      display: inline-block;
+    }
+    img {
+    }
+    .dfci, .ucsd {
+      margin-top: 20px;
+    }
+    .dfci {
+      float: left;
+    }
+    .ucsd {
+      float: right;
+    }
+  }
+  #footer-widget-area {
+    margin: 30px 0 50px;
+  }
+  #fourth {
+    .xoxo {
+      float: right;
+    }
+  }
+}
+
+#footer a, #footer a:hover {
+  text-decoration: underline;
+}
+#second {
+    text-align: center;
+}
+#third {
+    text-align: right;
+}
+#second img, #third img {
+    display: inline-block;
+}
+.footer-bottom {
+  p {
+    margin-bottom: 0;
+  }
+  text-align: center;
+  padding-bottom: 30px;
+}
+.footer-bottom-container {
+    padding: 18px 0 40px;
+}
+.footer-bottom-container, .footer-bottom-container a {
+    color: #000;
+}
+.footer-bottom-container nav {
+    text-align: center;
+}
+.footer-bottom-container ul {
+    list-style: none;
+    display: inline-block;
+}
+.footer-bottom-container li {
+    float: left;
+    border-left: #000 1px solid;
+    padding: 0 8px;
+    font-size: 1.2em;
+}
+.footer-bottom-container li:first-child {
+    border: none;
+} 
